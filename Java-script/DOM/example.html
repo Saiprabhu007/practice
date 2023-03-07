@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Button to Change CSS Properties</title>
+    <style>
+      #my-paragraph {
+        font-size: 16px;
+        color: black;
+      }
+      #my-paragraph.changed {
+        font-size: 24px;
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="my-paragraph">This is a paragraph element.</p>
+    <button onclick="document.getElementById('my-paragraph').classList.toggle('changed')">Change CSS Properties</button>
+  </body>
+</html>

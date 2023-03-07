@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Score App</title>
+</head>
+<body>
+  <h1>Score App</h1>
+  <p>Local Score: <span id="local-score">0</span></p>
+  <p>Session Score: <span id="session-score">0</span></p>
+  <button onclick="incrementScores()">Increment Scores</button>
+
+  <script>
+    // Get the current Local Score from Local Storage or set it to 0
+    let localScore = parseInt(localStorage.getItem('localScore')) || 0;
+    document.getElementById('local-score').textContent = localScore;
+
+    // Get the current Session Score from Session Storage or set it to 0
+    let sessionScore = parseInt(sessionStorage.getItem('sessionScore')) || 0;
+    document.getElementById('session-score').textContent = sessionScore;
+
+    // Function to increment the scores and update the display
+    function incrementScores() {
+      localScore++;
+      sessionScore++;
+      sessionStorage.setItem('sessionScore', sessionScore);
+      localStorage.setItem('localScore', localScore);
+      document.getElementById('local-score').textContent = localScore;
+      document.getElementById('session-score').textContent = sessionScore + 1;
+    }
+  </script>
+</body>
+</html>

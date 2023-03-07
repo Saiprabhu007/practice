@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>track alignment</title>
+    <style>
+    .container{
+        background-color: #eee;
+        width: 1000px;
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(100px,120px));
+        grid-template-rows: 100px 100px 100px;
+        grid-gap: 3px;
+        grid-auto-rows: 70px;
+        grid-auto-flow:row;
+        grid-auto-columns: 50px;
+        /* align-content: end; */
+        justify-content: space-evenly;
+        align-content:space-between;
+        grid-auto-flow: column;
+    }
+    .item1{
+        background-color: red;
+    }
+    .item2{
+        background-color:yellow;
+    }
+    .item3{
+        background-color:orange;
+    }
+    .item4{
+        background-color:blue;
+    }
+    .item5{
+        background-color:green;
+    }
+    .item6{
+        background-color:aqua;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1" style="text-align: center;">first</div>
+        <div class="items item2">second</div>
+        <div class="items item3">third</div>
+        <div class="items item4">fourth</div>
+        <div class="items item5">fifth</div>
+        <div class="items item6">sixth</div>
+    </div>
+</body>
+</html>

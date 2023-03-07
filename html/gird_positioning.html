@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid positioning</title>
+    <style>
+        .container{
+            background-color: #eee;
+            width: 700px;
+            height: 300px;
+            margin:70px 0px 0px 50px;
+            display:grid;
+            grid-template-rows:200px 200px;
+            grid-template-columns:repeat(2,150px) 1fr ;
+            grid-gap: 2px 2px;
+           
+        }
+        .item1{
+            background-color: red;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 3;
+            grid-column-end: 4;
+
+        }
+        .item2{
+            background-color:yellow;
+        }
+        .item3{
+            background-color:orange;
+        }
+        .item4{
+            background-color: pink;
+        }
+        .item5{
+            background-color: black;
+        }
+        .item6{
+            background-color:green;
+            grid-area: 1/2/2/3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">first</div>
+        <div class="items item2">second</div>
+        <div class="items item3">third</div>
+        <div class="items item4">fourth</div>
+        <div class="items item5">fifth</div>
+        <div class="items item6">sixth</div>
+    </div>
+</body>
+</html>

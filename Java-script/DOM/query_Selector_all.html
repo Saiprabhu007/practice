@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+	<style>
+		.intro {
+			font-weight: bold;
+		}
+		.subheading {
+			color: blue;
+		}
+		.list {
+			list-style-type: circle;
+		}
+	</style>
+    <script>
+var intros = document.querySelectorAll("p.intro");
+for (var i = 0; i < intros.length; i++) {
+	console.log(intros[i].textContent);
+}
+var subheadings = document.querySelectorAll("h2.subheading");
+for (var i = 0; i < subheadings.length; i++) {
+	subheadings[i].style.color = "red";
+}
+var lists = document.querySelectorAll("ul.list");
+for (var i = 0; i < lists.length; i++) {
+	lists[i].style.listStyleType = "square";
+}
+
+    </script>
+</head>
+<body>
+	<h1>Welcome to my webpage</h1>
+	<p class="intro">This is a paragraph</p>
+	<div>
+		<h2 class="subheading">This is a subheading</h2>
+		<p class="intro">This is another paragraph</p>
+	</div>
+	<ul class="list">
+		<li>List item 1</li>
+		<li>List item 2</li>
+	</ul>
+	<p id="special">This is a special paragraph</p>
+</body>
+</html>

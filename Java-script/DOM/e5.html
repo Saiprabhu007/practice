@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Displaying Added and Removed Items Example</title>
+  </head>
+  <body>
+    <input type="text" id="item-input">
+    <button id="add-button">Add Item</button>
+    <ul id="item-list"></ul>
+    <script>
+      // Get references to the input, button, and list elements
+      const itemInput = document.getElementById('item-input');
+      const addButton = document.getElementById('add-button');
+      const itemList = document.getElementById('item-list');
+      // Create an array to keep track of added and removed items
+      const items = [];
+      // Add an event listener to the button that adds a new item to the list
+      addButton.addEventListener('click', function() {
+        // Get the value of the input field
+        const newItemText = itemInput.value;
+        // Create a new list item element with the text of the input field
+        const newItem = document.createElement('li');
+        newItem.textContent = newItemText;
+        // Add the new list item to the list
+        itemList.appendChild(newItem);
+        // Add the new item to the items array
+        items.push(newItemText);
+        // Clear the input field
+        itemInput.value = '';
+      });
+      // Add an event listener to the list that removes an item from the list
+      itemList.addEventListener('click', function(event) {
+        // Check if the clicked element is a list item
+        if (event.target.tagName === 'LI') {
+          // Remove the list item from the list
+          event.target.remove();
+          // Remove the corresponding item from the items array
+          const removedItemText = event.target.textContent;
+          const index = items.indexOf(removedItemText);
+          if (index > -1) {
+            items.splice(index, 1);
+          }
+        }
+      });
+      // Add an event listener to the input that displays the added and removed items
+      itemInput.addEventListener('keyup', function() {
+        // Get the value of the input field
+        const currentItemText = itemInput.value;
+        // Display the added and removed items
+        const addedItems = items.filter(item => !currentItemText.includes(item));
+        const removedItems = items.filter(item => !addedItems.includes(item));
+        const addedItemsText = addedItems.join(', ');
+        const removedItemsText = removedItems.join(', ');
+        const displayText = `Added items: ${addedItemsText}\nRemoved items: ${removedItemsText}`;
+        alert(displayText);
+      });
+    </script>
+  </body>
+</html>

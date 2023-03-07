@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Displaying Added Items Example</title>
+  </head>
+  <body>
+    <input type="text" id="item-input">
+    <button id="add-button">Add Item</button>
+    <ul id="item-list"></ul>
+    <script>
+      // Get references to the input, button, and list elements
+      const itemInput = document.getElementById('item-input');
+      const addButton = document.getElementById('add-button');
+      const itemList = document.getElementById('item-list');
+      // Add an event listener to the button that adds a new item to the list
+      addButton.addEventListener('click', function() {
+        // Get the value of the input field
+        const newItemText = itemInput.value;
+        // Create a new list item element with the text of the input field
+        const newItem = document.createElement('li');
+        newItem.textContent = newItemText;
+        // Add the new list item to the list
+        itemList.appendChild(newItem);
+        // Clear the input field
+        itemInput.value = '';
+      });
+    </script>
+  </body>
+</html>

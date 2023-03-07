@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+     <style>
+        .container{
+            height:400px;
+            width:400px;
+            display:flex;
+            border: 2px solid black;
+            flex-direction:row;
+            margin:10px;
+            padding: 10px;
+            /* flex-direction: row-reverse; */
+            /* flex-wrap:wrap-reverse; */
+            /* flex-flow: row nowrap; */
+            /* justify-content:space-around; */
+            /* align-items:flex-center; */
+            /* align-content: space-between; */
+        
+}
+        .one{
+            background-color: red;
+            margin:4px;
+            width: 50px;
+            align-self: strech;
+        }
+        .two{
+            background-color:green;
+            margin:4px;
+            width: 50px;
+            align-self: center;
+        }
+        .three{
+            background-color:blue;
+            margin:4px;
+            width: 50px;
+            align-self: flex-end;
+        }
+        .four{
+            background-color: yellow;
+            margin:4px;
+            width: 50px;
+        }
+        .five{
+            background-color:orange;
+            margin:4px;
+            width: 50px;
+        }
+        .six{
+            background-color: navy;
+            margin:4px;
+            width: 50px;
+        }
+     </style>
+</head>
+<body>
+    <h1>demonstration of flex alignment</h1>
+    <br><br>
+      <div class="container">
+        <div class="one">one</div>
+        <div class="two">two</div>
+        <div class="three">three</div>
+        <div class="four">fourr</div>
+       <div class="five">five</div>
+        <div class="six">six</div>
+      </div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* height: 300px;
+            width: 1000px; */
+            display: flex;
+            border: 3px solid black;
+            background-color:lightcyan;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .items{
+            height: 100px;
+            width: 90px;
+            /* flex-direction: row; */
+            margin:5px;
+            flex-grow:1;
+            flex-basis:100px;
+            flex-shrink:0;
+        }
+        .item1{
+            background-color: red;
+            order:-2;
+        }
+        .item2{
+            background-color:green;
+            /* flex-grow: 2; */
+        }
+        
+        .item3{
+            background-color:yellow;
+            order: -3;
+            /* flex-grow: 3; */
+            margin-right: auto;
+        }
+        
+        .item4{
+            background-color:blue;
+            order: 3;
+        }
+        
+        .item5{
+            background-color:orange;
+        }
+        
+        .item6{
+            background-color: purple;
+        }
+        
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+            <div class="items item1">one</div>
+            <div class="items item2">two</div>
+            <div class="items item3">three</div>
+            <div class="items item4">four</div>
+            <div class="items item5">five</div>
+            <div class="items item6">six</div>
+    
+    
+        </div>
+</body>
+</html>

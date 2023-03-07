@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+    <script>
+var img = document.querySelector('img[alt="A beautiful image"]');
+console.log(img.getAttribute('src'));
+
+var links = document.querySelectorAll('a[href^="https://"]');
+for (var i = 0; i < links.length; i++) {
+	console.log(links[i].getAttribute('href'));
+}
+
+var input = document.querySelector('input[placeholder*="name"]');
+
+console.log(input.getAttribute('placeholder'));
+
+    </script>
+</head>
+<body>
+	<h1>Welcome to my webpage</h1>
+	<img src="image.jpg" alt="A beautiful image">
+	<a href="https://www.google.com">Google</a>
+	<input type="text" placeholder="Enter your name">
+</body>
+</html>

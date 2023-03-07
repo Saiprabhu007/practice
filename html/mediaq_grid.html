@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queries</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+        .container{
+            background-color: #eee;
+            width: 400px;
+            height: 300px;
+            margin:70px 0px 0px 50px;
+            display:grid;
+            grid-template-columns:repeat(2,150px)  ;
+            grid-gap: 8px;
+        }
+        .one{
+            background-color: blue;
+        }
+        .two{
+            background-color: beige;
+        }
+        @media (max-widht:200px) {
+            .container .one{
+                color:darkmagenta;
+            }
+
+            
+        }
+    </style>
+   
+</head>
+<body>
+    <div class="head">
+    <h1>Media Queries </h1>
+    </div>
+    <div class="container">
+        <div class="one">one</div>
+        <div class="two">two</div>
+</body>
+</html>

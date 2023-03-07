@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage demonstration</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem('username','saiprabhu');
+        localStorage.setItem('email','dandanayaksaiprabhu365@gmail.com');
+        localStorage.setItem('productname','levis shirt');
+        localStorage.setItem('price','1700');
+        console.log(localStorage)
+        console.log(localStorage.getItem('email'));
+        console.log(localStorage.getItem('username'))
+        localStorage.setItem('email','dandanayaksaiprabhu2001@gmail.com')
+        console.log(localStorage.getItem('email'));
+        console.log(localStorage.key(2));
+        console.log(localStorage.length);
+    </script>
+</body>
+</html>

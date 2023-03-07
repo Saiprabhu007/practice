@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping List</title>
+    <script>
+      // Get references to the input and list elements
+var input = document.getElementById("item");
+var list = document.getElementById("list");
+
+// Function to add a new item to the list
+function addItem() {
+	// Create a new <li> element with the input value as its text content
+	var newItem = document.createElement("li");
+	newItem.textContent = input.value;
+
+	// Add a button to remove the item
+	var removeButton = document.createElement("button");
+	removeButton.textContent = "Remove";
+	removeButton.onclick = function() {
+		list.removeChild(newItem);
+	};
+
+	// Append the new item and remove button to the list
+	newItem.appendChild(removeButton);
+	list.appendChild(newItem);
+
+	// Clear the input field
+	input.value = "";
+}
+
+    </script>
+</head>
+<body>
+	<h1>Shopping List</h1>
+	<input type="text" id="item" placeholder="Enter an item">
+	<button onclick="addItem()">Add Item</button>
+	<ul id="list"></ul>
+	<script src="shoppinglist.js"></script>
+</body>
+</html>

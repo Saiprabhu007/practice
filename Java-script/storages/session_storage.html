@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>session storage demonstration</title>
+</head>
+<body>
+    <script>
+        sessionStorage.setItem('username','saiprabhu');
+        sessionStorage.setItem('email','dandanayaksaiprabhu365@gmail.com');
+        sessionStorage.setItem('productname','levis shirt');
+        sessionStorage.setItem('price','1700');
+        console.log(sessionStorage)
+        console.log(sessionStorage.getItem('email'));
+        console.log(sessionStorage.getItem('username'))
+        sessionStorage.setItem('email','dandanayaksaiprabhu2001@gmail.com')
+        console.log(sessionStorage.getItem('email'));
+        console.log(sessionStorage.key(2));
+        console.log(sessionStorage.length);
+    </script>
+</body>
+</html>

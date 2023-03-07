@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>implicit grid</title>
+    <style>
+        .container{
+            background-color: #eee;
+            width: 800px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,150px);
+            grid-gap: 3px;
+            grid-auto-rows: 70px;
+            grid-auto-flow:column;
+            grid-auto-columns: 50px;
+        }
+        .item1{
+            background-color: red;
+        }
+        .item2{
+            background-color:yellow;
+        }
+        .item3{
+            background-color:orange;
+        }
+        .item4{
+            background-color:blue;
+        }
+        .item5{
+            background-color:green;
+        }
+        .item6{
+            background-color:aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">first</div>
+        <div class="items item2">second</div>
+        <div class="items item3">third</div>
+        <div class="items item4">fourth</div>
+        <div class="items item5">fifth</div>
+        <div class="items item6">sixth</div>
+        <div class="items item7">seventh</div>
+        <!-- <div class="items item8">eight</div> -->
+
+    </div>
+</body>
+</html>
